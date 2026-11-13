@@ -11,6 +11,10 @@ import trustpermit4 from '../assets/trustpermit4.png';
 import barangayLogin from '../assets/brgy.png';
 import barangayAdmin from '../assets/brgy1.png';
 import barangayResident from '../assets/barangay2.png';
+import rental from '../assets/rental.png';
+import rental1 from '../assets/rental1.png';
+import rental2 from '../assets/rental2.png';
+import rental3 from '../assets/rental3.png';
 
 const projects = [
   {
@@ -18,7 +22,7 @@ const projects = [
     category: 'Full-Stack',
     type: 'fullstack',
     description:
-      'Enterprise-grade rental management system with real-time inventory, Stripe payments, and admin analytics.',
+      'Browse available vehicles and book a rental with DriveEasy’s straightforward car-rental experience.',
     overview:
       'Comprehensive car rental platform designed for fleet operators and customers. Built with modern React frontend, Node.js backend, and MongoDB database. Features secure payment processing, real-time vehicle tracking, booking management, and detailed rental analytics for business intelligence.',
     features: [
@@ -33,9 +37,10 @@ const projects = [
     techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'Tailwind CSS'],
     icon: Car,
     accentColor: 'from-amber-500 to-orange-600',
-    liveLink: 'https://your-car-rental-live.com',
+    liveLink: 'https://drive-easy-kappa.vercel.app/',
     githubLink: 'https://github.com/yourusername/car-rental',
     image: '/assets/car-rental.jpg',
+    carousel: [rental2, rental3, rental, rental1],
   },
   {
     title: 'TrustPermit',
@@ -217,7 +222,8 @@ export default function Work() {
                 </a>
               )}
 
-              {(selectedProject?.title === 'TrustPermit' ||
+              {(selectedProject?.title === 'Car Rental Platform' ||
+                selectedProject?.title === 'TrustPermit' ||
                 selectedProject?.title === 'Barangay Management System') && (
                 <>
                   <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
