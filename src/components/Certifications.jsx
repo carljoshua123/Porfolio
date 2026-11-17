@@ -1,6 +1,9 @@
 import { ArrowUpRight, Award, CalendarDays, Eye, FileText } from 'lucide-react';
-import compTIAITFCertificate from '../assets/resume-webinar-certificate.pdf';
-import resumeWebinarCertificate from '../assets/comptia-itf-certificate.pdf';
+import compTIAITFCertificate from '../assets/comptia-itf-certificate.pdf';
+import resumeWebinarCertificate from '../assets/resume-webinar-certificate.pdf';
+import introductionToGenAICertificate from '../assets/introduction-to-gen-ai-certificate.pdf';
+import digitalWorldCertificate from '../assets/digital-world-certificate.pdf';
+import safeBrowsingCertificate from '../assets/safe-browsing-certificate.pdf';
 
 const certifications = [
   {
@@ -9,7 +12,7 @@ const certifications = [
     date: 'July 1, 2024',
     description:
       'Foundational knowledge of IT concepts, infrastructure, software, security, and database fundamentals.',
-    pdf: compTIAITFCertificate,
+    document: compTIAITFCertificate,
   },
   {
     title: 'Debugging Your Resume: Coding the Perfect Profile',
@@ -17,7 +20,31 @@ const certifications = [
     date: 'August 19, 2026',
     description:
       'Webinar attendance focused on building a strong professional profile and improving a resume for technology careers.',
-    pdf: resumeWebinarCertificate,
+    document: resumeWebinarCertificate,
+  },
+  {
+    title: 'Introduction to Gen AI',
+    issuer: 'Accenture',
+    date: 'November 16, 2026',
+    description:
+      'Completed an introductory course covering the fundamentals and applications of generative AI.',
+    document: introductionToGenAICertificate,
+  },
+  {
+    title: 'Introduction to the Digital World',
+    issuer: 'Accenture',
+    date: 'November 16, 2026',
+    description:
+      'Completed a course introducing digital technologies and the connected digital world.',
+    document: digitalWorldCertificate,
+  },
+  {
+    title: 'Browse the Internet Safely',
+    issuer: 'Accenture',
+    date: 'November 16, 2026',
+    description:
+      'Completed a course on safe internet browsing and essential online safety practices.',
+    document: safeBrowsingCertificate,
   },
 ];
 
@@ -67,14 +94,14 @@ export default function Certifications() {
                   Issued {certificate.date}
                 </p>
                 <a
-                  href={certificate.pdf}
+                  href={certificate.document}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`View ${certificate.title} PDF in a new tab`}
+                  aria-label={`View ${certificate.title} certificate PDF in a new tab`}
                   className="inline-flex items-center gap-2 rounded-lg border border-amber-400/30 bg-amber-400/10 px-3.5 py-2 text-xs font-semibold uppercase tracking-wide text-amber-200 transition-colors hover:border-amber-300/60 hover:bg-amber-400/20"
                 >
                   <Eye className="h-4 w-4" aria-hidden="true" />
-                  View PDF
+                  View
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
